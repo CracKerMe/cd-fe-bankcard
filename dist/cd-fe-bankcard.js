@@ -1,4 +1,4 @@
-/*! cd-fe-bankcard v0.0.1 | (c) 2022-present Apple Sun | MIT */
+/*! cd-fe-bankcard v0.0.2 | (c) 2022-present Apple Sun | MIT */
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
     typeof define === 'function' && define.amd ? define(factory) :

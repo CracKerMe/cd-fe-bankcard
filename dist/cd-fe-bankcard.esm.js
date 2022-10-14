@@ -1,4 +1,4 @@
-/*! cd-fe-bankcard v0.0.1 | (c) 2022-present Apple Sun | MIT */
+/*! cd-fe-bankcard v0.0.2 | (c) 2022-present Apple Sun | MIT */
 const bankcardList = [{
         bankName: '中国邮政储蓄银行',
         bankCode: 'PSBC',
