@@ -1,0 +1,64 @@
+{
+  "name": "cd-fe-bankcard",
+  "version": "0.0.1",
+  "description": "潮点前端(cdfe)银行卡信息获取",
+  "main": "dist/cd-fe-bankcard.js",
+  "module": "dist/cd-fe-bankcard.esm.js",
+  "types": "dist/cd-fe-bankcard.d.ts",
+  "browser": "dist/cd-fe-bankcard.min.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development rollup -c -w",
+    "build": "cross-env NODE_ENV=produaction rollup -c",
+    "build:dts": "tsc --outDir ./.temp --declaration --emitDeclarationOnly",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "clean": "del-cli dist .temp",
+    "lint": "eslint . --ext .js,.ts --fix",
+    "release": "npm run clean && npm run lint && npm run build:dts && npm run build && npm run changelog"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CracKerMe/cd-fe-bankcard.git"
+  },
+  "keywords": [
+    "bank",
+    "bankcard",
+    "chaodian",
+    "ts"
+  ],
+  "author": {
+    "name": "Apple Sun",
+    "url": "http://awebman.com/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CracKerMe/cd-fe-bankcard/issues"
+  },
+  "homepage": "https://github.com/CracKerMe/cd-fe-bankcard",
+  "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@babel/preset-env": "^7.19.4",
+    "@rollup/plugin-typescript": "^8.5.0",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "change-case": "^4.1.2",
+    "conventional-changelog-cli": "^2.2.2",
+    "create-banner": "^2.0.0",
+    "cross-env": "^7.0.3",
+    "del-cli": "^4.0.1",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-airbnb-typescript": "^14.0.2",
+    "eslint-plugin-import": "^2.26.0",
+    "rollup": "^2.79.1",
+    "rollup-plugin-livereload": "^2.0.5",
+    "rollup-plugin-serve": "^2.0.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "axios": "^1.1.2"
+  }
+}
